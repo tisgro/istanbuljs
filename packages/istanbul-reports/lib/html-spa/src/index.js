@@ -7,6 +7,7 @@ import SummaryHeader from './summaryHeader';
 import getChildData from './getChildData';
 import FlattenToggle from './flattenToggle';
 import FilterToggle from './filterToggle';
+import FileBreadcrumbs from './fileBreadcrumbs';
 import { setLocation, decodeLocation } from './routing';
 
 const sourceData = window.data;
@@ -94,20 +95,6 @@ function App() {
                     metricsToShow={metricsToShow}
                 />
             </div>
-            {Boolean(fileFilter) && (
-                <div className="layout__section">
-                    <h1>
-                        {fileFilter} (
-                        <a
-                            href="javascript:void()"
-                            onClick={() => setFileFilter('')}
-                        >
-                            Clear
-                        </a>
-                        )
-                    </h1>
-                </div>
-            )}
             <div className="layout__section">
                 <div className="toolbar">
                     <div className="toolbar__item">
@@ -120,6 +107,14 @@ function App() {
                         />
                     </div>
                 </div>
+            </div>
+            <div className="layout__section">
+                <h1>
+                    <FileBreadcrumbs
+                        fileFilter={fileFilter}
+                        setFileFilter={setFileFilter}
+                    />
+                </h1>
             </div>
             <div className="layout__section layout__section--fill">
                 <table className="coverage-summary">
