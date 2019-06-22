@@ -5,8 +5,8 @@ import SummaryTableHeader from './summaryTableHeader';
 import SummaryTableLine from './summaryTableLine';
 import SummaryHeader from './summaryHeader';
 import getChildData from './getChildData';
-import FlattenButton from './flattenButton';
-import FilterButtons from './filterButtons';
+import FlattenToggle from './flattenToggle';
+import FilterToggle from './filterToggle';
 import { setLocation, decodeLocation } from './routing';
 
 const sourceData = window.data;
@@ -107,12 +107,16 @@ function App() {
                         </h1>
                     </div>
                 )}
-                <div className="pad1">
-                    <FlattenButton setIsFlat={setIsFlat} isFlat={isFlat} />
-                    <FilterButtons
-                        activeFilters={activeFilters}
-                        setFilters={setFilters}
-                    />
+                <div className="pad1 toolbar">
+                    <div className="toolbar__item">
+                        <FlattenToggle setIsFlat={setIsFlat} isFlat={isFlat} />
+                    </div>
+                    <div className="toolbar__item">
+                        <FilterToggle
+                            activeFilters={activeFilters}
+                            setFilters={setFilters}
+                        />
+                    </div>
                 </div>
                 <div className="pad1">
                     <table className="coverage-summary">
