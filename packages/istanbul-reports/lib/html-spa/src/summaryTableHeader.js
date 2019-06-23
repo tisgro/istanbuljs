@@ -57,6 +57,7 @@ function SubHeadings({ sortKeyPrefix, onSort, activeSort }) {
                 sortKey={sortKeyPrefix + '.pct'}
                 activeSort={activeSort}
             />
+            <th></th>
             <SummaryTableHeaderCell
                 name="Covered"
                 onSort={onSort}
@@ -82,10 +83,10 @@ export default function SummaryTableHeader({
         <thead>
             <tr className="topheading">
                 <FileHeaderCell onSort={onSort} activeSort={activeSort} />
-                {metricsToShow.statements && <th colSpan={3}>Statements</th>}
-                {metricsToShow.branches && <th colSpan={3}>Branches</th>}
-                {metricsToShow.functions && <th colSpan={3}>Functions</th>}
-                {metricsToShow.lines && <th colSpan={3}>Lines</th>}
+                {metricsToShow.statements && <th colSpan={4}>Statements</th>}
+                {metricsToShow.branches && <th colSpan={4}>Branches</th>}
+                {metricsToShow.functions && <th colSpan={4}>Functions</th>}
+                {metricsToShow.lines && <th colSpan={4}>Lines</th>}
             </tr>
             <tr className="subheading">
                 <th />
