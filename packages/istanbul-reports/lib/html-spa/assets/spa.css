@@ -222,6 +222,7 @@ a:hover {
 .coverage-summary th.file {
     width: 100%;
     text-align: left;
+    vertical-align: bottom;
 }
 .coverage-summary td.file {
     white-space: nowrap;

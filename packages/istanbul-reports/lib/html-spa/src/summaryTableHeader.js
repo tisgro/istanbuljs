@@ -40,6 +40,7 @@ function FileHeaderCell({ onSort, activeSort }) {
     return (
         <th
             className={'sortable file ' + sortClass}
+            rowSpan={2}
             onClick={() => onSort(newSort)}
         >
             File
@@ -89,7 +90,6 @@ export default function SummaryTableHeader({
                 {metricsToShow.lines && <th colSpan={4}>Lines</th>}
             </tr>
             <tr className="subheading">
-                <th />
                 {metricsToShow.statements && (
                     <SubHeadings
                         sortKeyPrefix="statements"
