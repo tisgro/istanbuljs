@@ -33,11 +33,13 @@ function Ignores({ metrics, metricsToShow }) {
 function StatusMetric({ data, name }) {
     return (
         <div className="toolbar__item">
-            <span className="strong">{data.pct}%</span>{' '}
-            <span className="quiet">{name}</span>{' '}
-            <span className={'fraction ' + data.classForPercent}>
-                {data.covered}/{data.total}
-            </span>
+            <div className={`bignum ${data.classForPercent}`}>
+                <div className="bignum__label">{name}</div>
+                <div className="bignum__data">{data.pct}%</div>
+                <div className="bignum__subdata">
+                    {data.covered} of {data.total}
+                </div>
+            </div>
         </div>
     );
 }

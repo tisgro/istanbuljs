@@ -299,3 +299,35 @@ a:hover {
 .bar__data {
     height: 100%;
 }
+
+/* Bignum */
+
+.bignum {
+    padding: 20px;
+    text-align: center;
+    border-radius: 200px;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.bignum > *:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.bignum__data {
+    font-size: 40px;
+    line-height: 40px;
+}
+
+.bignum__subdata {
+    color: #666;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.bignum__label {
+    color: #666;
+}
