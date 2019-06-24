@@ -76,6 +76,10 @@ a:hover {
     background: #c21f39;
 }
 
+.low--border {
+    border: 1px solid #c21f39;
+}
+
 .medium {
     background: #fff4c2;
 }
@@ -84,12 +88,20 @@ a:hover {
     background: #f9cd0b;
 }
 
+.medium--border {
+    border: 1px solid #f9cd0b;
+}
+
 .high {
     background: rgb(230, 245, 208);
 }
 
 .high--dark {
     background: rgb(77, 146, 33);
+}
+
+.high--border {
+    border: 1px solid rgb(77, 146, 33);
 }
 
 /* App */
@@ -203,8 +215,8 @@ a:hover {
     border-collapse: collapse;
 }
 
-.coverage-summary tbody tr {
-    border-bottom: 1px solid #fff;
+.coverage-summary tbody tr:nth-child(3n) {
+    border-bottom: 1px solid #eee;
 }
 
 .coverage-summary td,
@@ -251,7 +263,7 @@ a:hover {
     width: 1.1em;
 }
 
-.coverage-summary .topheader th {
+.coverage-summary th {
     border-bottom: 1px solid #eee;
 }
 .coverage-summary .headercell {
@@ -260,9 +272,9 @@ a:hover {
     font-size: 12px;
     color: #666;
 }
-.coverage-summary .headercell:nth-child(4n - 2),
+.coverage-summary .headercell:nth-child(4n - 3),
 .coverage-summary td:nth-child(4n - 2) {
-    border-left: 2px solid #fcfcfc;
+    border-left: 2em solid transparent;
     padding-left: 2em;
 }
 

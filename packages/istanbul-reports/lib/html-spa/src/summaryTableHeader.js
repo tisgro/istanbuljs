@@ -58,7 +58,7 @@ function SubHeadings({ sortKeyPrefix, onSort, activeSort }) {
                 sortKey={sortKeyPrefix + '.pct'}
                 activeSort={activeSort}
             />
-            <th></th>
+            <th className="headercell"></th>
             <SummaryTableHeaderCell
                 name="Covered"
                 onSort={onSort}

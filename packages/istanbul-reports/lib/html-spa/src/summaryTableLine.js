@@ -5,17 +5,19 @@ function MetricCells({ metrics }) {
 
     return (
         <>
-            <td className={'pct ' + classForPercent}>{Math.round(pct)}% </td>
-            <td className={classForPercent}>
-                <div className="bar">
+            <td className={'pct'}>{Math.round(pct)}% </td>
+            <td>
+                <div
+                    className={`bar ${classForPercent} ${classForPercent}--border`}
+                >
                     <div
                         className={`bar__data ${classForPercent} ${classForPercent}--dark`}
                         style={{ width: pct + '%' }}
                     ></div>
                 </div>
             </td>
-            <td className={'abs ' + classForPercent}>{covered}</td>
-            <td className={'abs ' + classForPercent}>{total}</td>
+            <td className={'abs'}>{covered}</td>
+            <td className={'abs'}>{total}</td>
         </>
     );
 }
@@ -81,7 +83,7 @@ export default function SummaryTableLine({
     return (
         <>
             <tr>
-                <td className={'file ' + metrics.statements.classForPercent}>
+                <td className={'file ' + metrics.statements.xclassForPercent}>
                     {/* eslint-disable-line prefer-spread */ Array.apply(null, {
                         length: tabSize
                     }).map((nothing, index) => (
