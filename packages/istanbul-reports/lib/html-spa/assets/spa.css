@@ -15,6 +15,7 @@ body {
 }
 
 button {
+    margin: 0;
     border: none;
     font: inherit;
     color: inherit;
