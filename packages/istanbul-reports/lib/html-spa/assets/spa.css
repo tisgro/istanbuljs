@@ -199,7 +199,6 @@ a:hover {
 /* Coverage */
 
 .coverage-summary {
-    width: 100%;
     border-collapse: collapse;
 }
 
@@ -223,7 +222,7 @@ a:hover {
     text-align: right;
 }
 .coverage-summary th.file {
-    width: 100%;
+    min-width: 300px;
     text-align: left;
     vertical-align: bottom;
 }
